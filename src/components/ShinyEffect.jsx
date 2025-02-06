@@ -8,10 +8,19 @@ const ShinyEffect = ({ left, right, top, size = 500 }) => {
     zIndex: `-1`,
   };
 
-//   if(left !== undefined){
-//     positionStyle.left
-//   }
-  return <div>ShinyEffect</div>;
+  if (left !== undefined) {
+    positionStyle.left = `${left}px`;
+  }
+
+  if (right !== undefined) {
+    positionStyle.right = `${right}px`;
+  }
+
+  return (
+    <div className="shiny-effect" style={positionStyle}>
+      ShinyEffect
+    </div>
+  );
 };
 
 export default ShinyEffect;
