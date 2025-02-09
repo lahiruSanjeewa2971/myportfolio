@@ -18,9 +18,10 @@ import { motion } from "framer-motion";
 
 const Hero = () => {
   return (
-    <div className="mt-24 max-w-[1200px] mx-auto relative">
+    <div className="mt-24 max-w-[1350px] w-full flex flex-col items-center p-3">
       <div className="grid md:grid-cols-2 place-items-center gap-8">
         <motion.div
+        //   className="bg-red-600"
           initial={{ opacity: 0, y: -50 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
@@ -86,6 +87,7 @@ const Hero = () => {
           </motion.div>
         </motion.div>
 
+        {/* <motion.div className="bg-yellow-300 w-full">hi</motion.div> */}
         <motion.img
           src={profilePic01}
           alt=""
@@ -112,9 +114,9 @@ const Hero = () => {
         <DiNodejsSmall className="text-green-600 mx-2" />
       </motion.div>
 
-      <div className="absolute inset-0 hidden md:block">
+      {/* <div className="absolute inset-0 hidden md:block">
         <ShinyEffect left={0} top={0} size={1400} />
-      </div>
+      </div> */}
     </div>
   );
 };
