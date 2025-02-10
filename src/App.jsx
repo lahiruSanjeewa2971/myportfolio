@@ -13,7 +13,7 @@ const App = () => {
         <Hero />
         <Skills />
         <Portfolio />
-        <Experience />
+        <Experience /> 
       </span>
       {/* <Navbar />
       <div className="w-full">

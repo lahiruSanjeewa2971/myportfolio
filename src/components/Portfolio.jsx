@@ -25,7 +25,7 @@ const projects = [
     client: "DFCC head office",
     service: "Frontend Developer",
     description:
-      "As a Frontend Developer on the OCTOPLEX project, I am part of the team revamping DFCC Bank Head Office's existing system to enhance its functionality and user experience. This modernization effort focuses on improving the platform’s performance, usability, and design, ensuring a seamless and efficient interface for users. My role involves implementing responsive and intuitive UI components, optimizing workflows, and integrating cutting-edge frontend technologies to deliver a refined and future-ready digital experience.",
+      "As a Frontend Developer on the OCTOPLEX project, I am contributing to the revamp of DFCC Bank Head Office's existing system by leveraging modern frontend technologies. My role involves building a scalable and maintainable React architecture, utilizing Redux for efficient state management, and ensuring component reusability to enhance development efficiency. I focus on implementing best practices such as modular design, and performance optimizations. This modernization effort aims to improve the platform’s usability, maintainability, and overall performance, ensuring a future-ready digital experience.",
     links: {
       site: null,
       github: null,
@@ -37,7 +37,7 @@ const projects = [
     client: null,
     service: "Fullstack Developer",
     description:
-      "TripHeaven is my personal project, where I serve as the owner, developer, and designer. It’s a travel platform that allows users to explore and share destinations, organizing them by cities with interactive maps highlighting locations and nearby restaurants. Travelers can post feedback, making it a community-driven space for discovering and reviewing places. The goal is to create an engaging and informative experience, helping users navigate and share their travel experiences seamlessly.",
+      "TripHeaven is my personal project. It’s a travel platform built using best practices for both frontend and backend development. The backend is powered by Node.js with MongoDB as the database, ensuring scalability and efficiency, while the frontend is developed with React for a dynamic and responsive user experience. The platform allows users to explore and share destinations, organizing them by cities with interactive maps highlighting locations and nearby restaurants. Travelers can post feedback, making it a community-driven space for discovering and reviewing places. The goal is to provide an engaging and seamless experience for users to navigate and share their travel experiences.",
     links: {
       site: "https://triphaven.pages.dev/",
       github: "https://github.com/lahiruSanjeewa2971/TripHaven",
@@ -47,7 +47,7 @@ const projects = [
 
 const Portfolio = () => {
   return (
-    <div className="max-w-[1350px] flex flex-col justify-center items-center p-6 md:my-20" id="portfolio">
+    <div className="max-w-[1500px] flex flex-col justify-center items-center p-6 md:my-20" id="portfolio">
       <h2 className="text-3xl font-bold text-gray-200 mb-8">Portfolio</h2>
 
       {projects.map((project, index) => (

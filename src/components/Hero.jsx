@@ -18,10 +18,9 @@ import { motion } from "framer-motion";
 
 const Hero = () => {
   return (
-    <div className="mt-24 max-w-[1350px] w-full flex flex-col items-center p-3">
+    <div className="mt-24 max-w-[1300px] w-full flex flex-col items-center p-3">
       <div className="grid md:grid-cols-2 place-items-center gap-8">
         <motion.div
-        //   className="bg-red-600"
           initial={{ opacity: 0, y: -50 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
@@ -87,7 +86,6 @@ const Hero = () => {
           </motion.div>
         </motion.div>
 
-        {/* <motion.div className="bg-yellow-300 w-full">hi</motion.div> */}
         <motion.img
           src={profilePic01}
           alt=""
@@ -104,14 +102,16 @@ const Hero = () => {
         whileInView={{ opacity: 1 }}
         viewport={{ once: true }}
         transition={{ duration: 1, delay: 2 }}
-        className="flex flex-row text-7xl px-12 md:px-1 w-full justify-center items-center py-24"
+        className="flex md:flex-row flex-col md:text-7xl text-5xl justify-center items-center md:px-1 px-12 w-full py-9 mt-5"
       >
-        <p className="text-gray-200 mr-6">My Tech Stack</p>
-        <DiHtml5 className="text-orange-600 mx-2" />
-        <DiCss3 className="text-blue-600 mx-2" />
-        <DiJavascript1 className="text-yellow-600 mx-2" />
-        <DiReact className="text-blue-600 mx-2" />
-        <DiNodejsSmall className="text-green-600 mx-2" />
+        <p className="text-gray-200 md:mr-6 text-2xl">My Tech Stack</p>
+        <div className="flex flex-row mt-4 md:mt-0">
+          <DiHtml5 className="text-orange-600 mx-2" />
+          <DiCss3 className="text-blue-600 mx-2" />
+          <DiJavascript1 className="text-yellow-600 mx-2" />
+          <DiReact className="text-blue-600 mx-2" />
+          <DiNodejsSmall className="text-green-600 mx-2" />
+        </div>
       </motion.div>
 
       {/* <div className="absolute inset-0 hidden md:block">
