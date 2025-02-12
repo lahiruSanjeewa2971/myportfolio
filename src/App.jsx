@@ -5,6 +5,7 @@ import Skills from "./components/Skills";
 import Portfolio from "./components/Portfolio";
 import Experience from "./components/Experience";
 import Contacts from "./components/Contacts";
+import Footer from "./components/Footer";
 
 const App = () => {
   return (
@@ -16,6 +17,7 @@ const App = () => {
         <Portfolio />
         <Experience />
         <Contacts/> 
+        <Footer/>
       </span>
       {/* <Navbar />
       <div className="w-full">

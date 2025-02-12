@@ -67,7 +67,7 @@ const Contacts = () => {
           <textarea
             id="textarea"
             placeholder="Your Message ..."
-            name="email"
+            name="message"
             cols="30"
             rows="4"
             className="mb-2 w-full rounded-md border border-purple-600 py-2 pl-2 pr-4"
