@@ -8,6 +8,7 @@ import {
   DiMongodb,
   DiGithubBadge,
 } from "react-icons/di";
+import { SiTailwindcss, SiReact, SiRedux, SiAntdesign, SiExpress, SiAxios } from "react-icons/si";
 import Reveal from "./Reveal";
 import { LiaDotCircle } from "react-icons/lia";
 
@@ -22,34 +23,22 @@ const skills = [
         icon: <DiJavascript1 className="text-yellow-600 mx-2" />,
       },
       { name: "React", icon: <DiReact className="text-blue-600 mx-2" /> },
-      { name: "React Native", icon: <DiReact className="text-blue-600 mx-2" /> },
-      { name: "Tailwind css", icon: <DiReact className="text-blue-600 mx-2" /> },
-      { name: "Ant Design", icon: <DiReact className="text-blue-600 mx-2" /> },
-      { name: "Redux toolkit", icon: <DiReact className="text-blue-600 mx-2" /> },
-    ],
-    otherFrontendTech: [
-      {
-        name: "React Native",
-      },
-      {
-        name: "Tailwind css",
-      },
-      {
-        name: "Ant Design",
-      },
-      {
-        name: "Redux toolkit",
-      },
+      { name: "React Native", icon: <SiReact className="text-blue-600 mx-2" /> },
+      { name: "Tailwind css", icon: <SiTailwindcss className="text-blue-400 mx-2" /> },
+      { name: "Ant Design", icon: <SiAntdesign className="text-blue-600 mx-2" /> },
+      { name: "Redux toolkit", icon: <SiRedux className="text-purple-400 mx-2" /> },
     ],
   },
   {
     category: "Fullstack",
     technologies: [
+      { name: "MongoDB", icon: <DiMongodb className="text-green-600 mx-2" /> },
+      { name: "Express Js", icon: <SiExpress className="text-purple-600 mx-2" /> },
+      { name: "Axios", icon: <SiAxios className="text-blue-600 mx-2" /> },
       {
         name: "Node Js",
         icon: <DiNodejsSmall className="text-green-600 mx-2" />,
       },
-      { name: "MongoDB", icon: <DiMongodb className="text-green-600 mx-2" /> },
       { name: "React", icon: <DiReact className="text-blue-600 mx-2" /> },
       {
         name: "GitHub",
@@ -79,7 +68,7 @@ const Skills = () => {
           there.
         </a>
       </p> */}
-        <div className="flex flex-col md:flex-row justify-center space-y-8 md:space-y-0 md:space-x-8 max-w-[1200px] mx-auto bg-red-300">
+        <div className="flex flex-col md:flex-row justify-center space-y-8 md:space-y-0 md:space-x-8 max-w-[1200px] lg:min-w-[1000px] mx-auto">
           {skills.map((skill, index) => (
             <div
               key={index}
@@ -87,12 +76,12 @@ const Skills = () => {
             >
               <h3 className="text-xl font-bold mb-4 text-center">
                 {skill.category}
-              </h3>
+              </h3> 
               <div className="grid grid-cols-2 gap-4">
                 {skill.technologies.map((tech, idx) => (
                   <div key={idx} className="flex items-center space-x-2">
                     <span className="text-2xl">{tech.icon}</span>
-                    <span>{tech.name}</span>
+                    <span className="text-sm sm:text-lg">{tech.name}</span>
                   </div>
                 ))}
               </div>

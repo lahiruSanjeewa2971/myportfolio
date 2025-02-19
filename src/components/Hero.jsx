@@ -93,7 +93,9 @@ const Hero = () => {
                 <AiOutlineInstagram />
               </motion.a> */}
               <motion.a
-                href="www.linkedin.com/in/lahirusanjeewa2971"
+                href="https://www.linkedin.com/in/lahirusanjeewa2971/"
+                target="_blank"
+                rel="noopener noreferrer"
                 whileHover={{ scale: 1.2 }}
               >
                 <AiOutlineLinkedin />
