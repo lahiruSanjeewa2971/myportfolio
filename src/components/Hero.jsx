@@ -68,18 +68,34 @@ const Hero = () => {
                 boxShadow: "0px 0px 8px rgba(0, 0, 0, 0.3)",
               }}
               className="z-10 cursor-pointer font-bold text-gray-200 md:w-auto p-4 border border-purple-400 rounded-xl"
+              onClick={() => {
+                const link = document.createElement("a");
+                link.href = "/myCv.pdf";
+                link.download = "Lahiru_Sanjeewa.pdf";
+                document.body.appendChild(link);
+                link.click();
+                document.body.removeChild(link);
+              }}
             >
               Download CV
             </motion.button>
 
             <div className="flex flex-row text-4xl md:text-6xl text-purple-400 z-20">
-              <motion.a href="#" whileHover={{ scale: 1.2 }}>
+              <motion.a
+                href="https://github.com/lahiruSanjeewa2971"
+                whileHover={{ scale: 1.2 }}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 <AiOutlineGithub />
               </motion.a>
-              <motion.a href="#" whileHover={{ scale: 1.2 }}>
+              {/* <motion.a href="#" whileHover={{ scale: 1.2 }}>
                 <AiOutlineInstagram />
-              </motion.a>
-              <motion.a href="#" whileHover={{ scale: 1.2 }}>
+              </motion.a> */}
+              <motion.a
+                href="www.linkedin.com/in/lahirusanjeewa2971"
+                whileHover={{ scale: 1.2 }}
+              >
                 <AiOutlineLinkedin />
               </motion.a>
             </div>

@@ -9,11 +9,12 @@ import {
   DiGithubBadge,
 } from "react-icons/di";
 import Reveal from "./Reveal";
+import { LiaDotCircle } from "react-icons/lia";
 
 const skills = [
   {
     category: "Frontend",
-    texhnologies: [
+    technologies: [
       { name: "HTML", icon: <DiHtml5 className="text-orange-600 mx-2" /> },
       { name: "CSS", icon: <DiCss3 className="text-blue-600 mx-2" /> },
       {
@@ -21,11 +22,29 @@ const skills = [
         icon: <DiJavascript1 className="text-yellow-600 mx-2" />,
       },
       { name: "React", icon: <DiReact className="text-blue-600 mx-2" /> },
+      { name: "React Native", icon: <DiReact className="text-blue-600 mx-2" /> },
+      { name: "Tailwind css", icon: <DiReact className="text-blue-600 mx-2" /> },
+      { name: "Ant Design", icon: <DiReact className="text-blue-600 mx-2" /> },
+      { name: "Redux toolkit", icon: <DiReact className="text-blue-600 mx-2" /> },
+    ],
+    otherFrontendTech: [
+      {
+        name: "React Native",
+      },
+      {
+        name: "Tailwind css",
+      },
+      {
+        name: "Ant Design",
+      },
+      {
+        name: "Redux toolkit",
+      },
     ],
   },
   {
     category: "Fullstack",
-    texhnologies: [
+    technologies: [
       {
         name: "Node Js",
         icon: <DiNodejsSmall className="text-green-600 mx-2" />,
@@ -39,6 +58,10 @@ const skills = [
     ],
   },
 ];
+
+// const otherFrontendTech = [
+//   {}
+// ]
 
 const Skills = () => {
   return (
@@ -56,7 +79,7 @@ const Skills = () => {
           there.
         </a>
       </p> */}
-        <div className="flex flex-col md:flex-row justify-center space-y-8 md:space-y-0 md:space-x-8 max-w-[1200px] mx-auto">
+        <div className="flex flex-col md:flex-row justify-center space-y-8 md:space-y-0 md:space-x-8 max-w-[1200px] mx-auto bg-red-300">
           {skills.map((skill, index) => (
             <div
               key={index}
@@ -66,13 +89,22 @@ const Skills = () => {
                 {skill.category}
               </h3>
               <div className="grid grid-cols-2 gap-4">
-                {skill.texhnologies.map((tech, idx) => (
+                {skill.technologies.map((tech, idx) => (
                   <div key={idx} className="flex items-center space-x-2">
                     <span className="text-2xl">{tech.icon}</span>
                     <span>{tech.name}</span>
                   </div>
                 ))}
               </div>
+              {/* <div className="w-full mx-2 mt-4">
+                {skill?.otherFrontendTech &&
+                  skill?.otherFrontendTech.map((otherSkill, skillIndex) => (
+                    <div key={skillIndex} className="flex items-center gap-4">
+                      <LiaDotCircle />
+                      <span key={skillIndex}>{otherSkill.name}</span>
+                    </div>
+                  ))}
+              </div> */}
             </div>
           ))}
         </div>
