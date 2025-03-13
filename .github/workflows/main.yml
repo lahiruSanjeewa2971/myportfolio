@@ -3,7 +3,7 @@ name: Portfolio CI
 on:
   push:
     branches:
-      - main
+      - devops
 
 jobs:
   frontend:
