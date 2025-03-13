@@ -1,33 +1,42 @@
-name: Frontend and Backend CI
+name: Portfolio CI
 
 on:
   push:
     branches:
-      - main
+      - devops
 
 jobs:
   frontend:
-    name: Portfolio
+    name: Frontend Workflow (Vite)
     runs-on: ubuntu-latest
 
     steps:
-    # Checkout the code
-    - name: Checkout code
-      uses: actions/checkout@v3
-    
-    # Set up Node.js
-    - name: Set up Node.js
-      uses: actions/setup-node@v3
-      with:
-        node-version: 20 # Use your project's Node.js version
+      # Checkout the code
+      - name: Checkout code
+        uses: actions/checkout@v3
 
-    # Navigate to the frontend folder and install dependencies
-    - name: Install dependencies
-      working-directory: ./
-      run: npm install
+      # Set up Node.js
+      - name: Set up Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: 20 # Use project's Node.js version
 
-    # Run development server
-    - name: Start development server
-      working-directory: ./
-      run: npm run dev
- 
+      # Navigate to the frontend folder and install dependencies
+      - name: Install dependencies
+        working-directory: ./
+        run: npm install
+
+      - name: Remove old dist folder (if exists)
+        run: rm -rf dist # Deletes the dist folder
+
+      # Run development server
+      - name: Start development server
+        working-directory: ./
+        run: npm run build
+
+        # Upload frontend build artifacts
+      - name: Upload frontend build artifacts
+        uses: actions/upload-artifact@v4
+        with:
+          name: frontend-build-artifacts
+          path: ./triphaven-frontend/dist # Adjust to the actual build output folder
